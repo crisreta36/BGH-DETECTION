@@ -1,0 +1,25 @@
+# dataset.yaml
+
+# Ruta del conjunto de entrenamiento:
+# Aquí se especifica la ubicación de las imágenes que se usarán para entrenar el modelo YOLO.
+# La ruta debe ser absoluta o relativa al entorno de ejecución del modelo.
+train: C:\Users\sopor\OneDrive\Escritorio\BGH-CONEXION\datasets\train\images  
+
+# Ruta del conjunto de validación:
+# Aquí se especifica la ubicación de las imágenes que se usarán para validar el modelo durante el entrenamiento.
+# Este conjunto de datos permite evaluar el rendimiento del modelo en datos que no se utilizan directamente para ajustar los pesos.
+val: C:\Users\sopor\OneDrive\Escritorio\BGH-CONEXION\datasets\val\images      
+
+# Ruta del conjunto de prueba (opcional):
+# Se puede habilitar si deseas especificar un conjunto de prueba adicional para evaluar el modelo después del entrenamiento.
+# test: D:\CIENCIA-DE-DATOS-IA-4TO-CUATRIMESTRE\Practica-profecionalizantes-2\Sistema-BGH-Cable-Detection\BGH_PowerCheck\datasets\test\images    
+
+# Etiquetas de las clases:
+# Este bloque asocia un índice numérico a cada clase o categoría de objetos que el modelo YOLO detectará.
+# Es crucial que estas etiquetas coincidan exactamente con las clases utilizadas en los archivos de anotación (.txt).
+names:
+  0: Amarillo-CN31       # Índice 0 representa el objeto etiquetado como "Amarillo-CN31"
+  1: Rojo-L-OUT          # Índice 1 representa el objeto etiquetado como "Rojo-L-OUT"
+  2: Negro-N_IN(Arriba)  # Índice 2 representa el objeto etiquetado como "Negro-N_IN(Arriba)"
+  3: Azul-N_IN(Abajo)    # Índice 3 representa el objeto etiquetado como "Azul-N_IN(Abajo)"
+  4: Marron-L-IN         # Índice 4 representa el objeto etiquetado como "Marron-L-IN"

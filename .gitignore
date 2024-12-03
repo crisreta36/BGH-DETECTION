@@ -1,0 +1,46 @@
+# Ignorar entornos virtuales
+.venv/
+venv/
+
+# Ignorar configuraciones del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignorar configuraciones específicas del editor/IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar archivos de bases de datos locales
+*.sqlite3
+
+# Ignorar configuraciones de entorno
+.env
+*.env
+
+# Ignorar carpetas de cache
+.cache/
+__pycache__/
+
+# Ignorar archivos de compilación
+build/
+dist/
+output/
+
+# Ignorar configuraciones específicas de herramientas
+*.pyc
+*.egg-info/
+
+# Ignorar otros archivos no deseados
+*.bak
+*.tmp
+*.swp
