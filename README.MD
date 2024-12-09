@@ -33,3 +33,23 @@ Politécnico
 •	Nicolás Caballero – Profesor Practicas Profesionalizantes II
 •	Federico Magaldi - Coordinador Prácticas
 •	Martin Mirabete - Interesado Experto Ciencia de Datos
+
+# Pasos para Configurar y Ejecutar el Proyecto
+
+Prerrequisitos
+
+Python instalado (versión recomendada: 3.8 o superior).
+Git instalado para clonar el repositorio.
+
+1. Clonar el Repositorio
+
+2. Crear el Entorno Virtual
+
+3. Activar el Entorno Virtual
+
+4. Instalar las Librerías Requeridas
+Dentro del entorno virtual, instalar las dependencias del archivo requirements.txt:
+
+5. Ejecutar el Sistema
+
+python BG_DETECTION.py
