@@ -38,8 +38,7 @@ Politécnico
 
 Prerrequisitos
 
-Python instalado (versión recomendada: 3.8 o superior).
-Git instalado para clonar el repositorio.
+Python instalado (versión recomendada: 3.9 o superior).
 
 1. Clonar el Repositorio
 
