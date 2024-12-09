@@ -62,7 +62,6 @@ def visualize_predictions(frame, results, names):
             # Dibujar el texto encima del recuadro.
             cv2.putText(frame, text, (text_x, text_y), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 2, cv2.LINE_AA)
 
-
 # Función para iniciar la cámara.
 def iniciar_camara():
     global detener_camara
@@ -72,6 +71,7 @@ def iniciar_camara():
     cam_window = tk.Toplevel()
     cam_window.title("BGH Detection - Cámara")
     cam_window.geometry("800x600")  # Tamaño de la ventana.
+    cam_window.config(bg="#00274D")  # Fondo azul oscuro.
 
     # Función para detener la cámara desde el botón.
     def detener_desde_boton():
@@ -80,7 +80,7 @@ def iniciar_camara():
         cam_window.destroy()
 
     # Botón para detener la cámara.
-    btn_detener = Button(cam_window, text="Detener Cámara", font=("Arial", 16), command=detener_desde_boton)
+    btn_detener = Button(cam_window, text="Detener Cámara", font=("Arial", 16), command=detener_desde_boton, bg="#005A9C", fg="white")
     btn_detener.pack(pady=20)
 
     # Función para procesar video en segundo plano.
@@ -95,7 +95,7 @@ def iniciar_camara():
 
         # Acceder a la cámara.
         cap = cv2.VideoCapture(0)
-        cap.set(cv2.CAP_PROP_FPS, 30)  # Configurar FPS.
+        cap.set(cv2.CAP_PROP_FPS, 60)  # Configurar FPS.
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)  # Ancho.
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)  # Alto.
 
@@ -122,6 +122,7 @@ def iniciar_camara():
     Thread(target=procesar_video).start()
     cam_window.mainloop()
 
+
 # Función para cerrar sesión.
 def cerrar_sesion(menu):
     if messagebox.askyesno("Cerrar Sesión", "¿Estás seguro de cerrar la sesión?"):
@@ -132,24 +133,26 @@ def mostrar_menu():
     menu = tk.Tk()
     menu.title("BGH Detection - Menú Principal")
     menu.geometry("600x400")
+    menu.config(bg="#00274D")  # Fondo azul oscuro.
 
     # Botón para iniciar la cámara.
-    btn_iniciar_cam = tk.Button(menu, text="Iniciar Cámara", font=("Arial", 14), command=iniciar_camara)
+    btn_iniciar_cam = tk.Button(menu, text="Iniciar Cámara", font=("Arial", 14), command=iniciar_camara, bg="#005A9C", fg="white")
     btn_iniciar_cam.pack(pady=10)
 
     # Botón para ver registros fallidos.
-    btn_fallidos = tk.Button(menu, text="Registros Fallidos", font=("Arial", 14), command=lambda: messagebox.showinfo("Registros", "Funcionalidad en desarrollo"))
+    btn_fallidos = tk.Button(menu, text="Registros Fallidos", font=("Arial", 14), command=lambda: messagebox.showinfo("Registros", "Funcionalidad en desarrollo"), bg="#005A9C", fg="white")
     btn_fallidos.pack(pady=10)
 
     # Botón para ver detecciones correctas.
-    btn_correctos = tk.Button(menu, text="Detecciones Correctas", font=("Arial", 14), command=lambda: messagebox.showinfo("Registros", "Funcionalidad en desarrollo"))
+    btn_correctos = tk.Button(menu, text="Detecciones Correctas", font=("Arial", 14), command=lambda: messagebox.showinfo("Registros", "Funcionalidad en desarrollo"), bg="#005A9C", fg="white")
     btn_correctos.pack(pady=10)
 
     # Botón para cerrar sesión.
-    btn_cerrar_sesion = tk.Button(menu, text="Cerrar Sesión y Salir", font=("Arial", 14), command=lambda: cerrar_sesion(menu))
+    btn_cerrar_sesion = tk.Button(menu, text="Cerrar Sesión y Salir", font=("Arial", 14), command=lambda: cerrar_sesion(menu), bg="#005A9C", fg="white")
     btn_cerrar_sesion.pack(pady=20)
 
     menu.mainloop()
+
 
 # Validar login.
 def validate_login():
@@ -166,19 +169,20 @@ def validate_login():
 root = tk.Tk()
 root.title("BGH Detection - Login")
 root.geometry("400x300")
+root.config(bg="#00274D")  # Fondo azul oscuro.
 
 # Elementos del login.
-label_user = tk.Label(root, text="Usuario", font=("Arial", 14))
+label_user = tk.Label(root, text="Usuario", font=("Arial", 14), bg="#00274D", fg="white")
 label_user.pack(pady=10)
 entry_user = tk.Entry(root, font=("Arial", 14), width=20)
 entry_user.pack(pady=10)
 
-label_pass = tk.Label(root, text="Contraseña", font=("Arial", 14))
+label_pass = tk.Label(root, text="Contraseña", font=("Arial", 14), bg="#00274D", fg="white")
 label_pass.pack(pady=10)
 entry_pass = tk.Entry(root, show="*", font=("Arial", 14), width=20)
 entry_pass.pack(pady=10)
 
-btn_login = tk.Button(root, text="Iniciar Sesión", font=("Arial", 14), command=validate_login)
+btn_login = tk.Button(root, text="Iniciar Sesión", font=("Arial", 14), command=validate_login, bg="#005A9C", fg="white")
 btn_login.pack(pady=20)
 
 # Iniciar la aplicación con el bucle principal de Tkinter.
